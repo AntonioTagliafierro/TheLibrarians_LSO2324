@@ -12,8 +12,8 @@ public class Book implements Serializable {
     private String description;
     private Bookgenre genre;
     private Image cover;
-    private int totalItems;
-    private int notAvaiableItems;
+    private int totalCopies;
+    private int copiesOnLendLease; //copie attualmente in prestito
     public String getTitle() {
         return title;
     }
@@ -62,31 +62,31 @@ public class Book implements Serializable {
         this.cover = cover;
     }
 
-    public int getTotalItems() {
-        return totalItems;
+    public int getTotalCopies() {
+        return totalCopies;
     }
 
-    public void setTotalItems(int totalItems) {
-        this.totalItems = totalItems;
+    public void setTotalCopies(int totalCopies) {
+        this.totalCopies = totalCopies;
     }
 
-    public int getNotAvaiableItems() {
-        return notAvaiableItems;
+    public int getCopiesOnLendLease() {
+        return copiesOnLendLease;
     }
 
-    public void setNotAvaiableItems(int notAvaiableItems) {
-        this.notAvaiableItems = notAvaiableItems;
+    public void setCopiesOnLendLease(int copiesOnLendLease) {
+        this.copiesOnLendLease = copiesOnLendLease;
     }
 
 
-    public Book(String title, String authors, String ISBN, String description, Bookgenre genre, Image cover, int totalItems, int notAvaiableItems) {
+    public Book(String title, String authors, String ISBN, String description, Bookgenre genre, Image cover, int totalCopies, int copiesOnLendLease) {
         this.title = title;
         this.authors = authors;
         this.ISBN = ISBN;
         this.description = description;
         this.genre = genre;
         this.cover = cover;
-        this.totalItems = totalItems;
-        this.notAvaiableItems = notAvaiableItems;
+        this.totalCopies = totalCopies;
+        this.copiesOnLendLease = copiesOnLendLease;
     }
 }
