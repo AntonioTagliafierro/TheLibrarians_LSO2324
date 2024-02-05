@@ -2,11 +2,9 @@ package com.example.thelibrarians_lso2324.model;
 
 public class User {
 
-
-
-    public String email;
-    public String name;
-    public String surname;
+    private String email;
+    private String name;
+    private String surname;
 
     public User(String email, String name, String surname) {
         this.email = email;

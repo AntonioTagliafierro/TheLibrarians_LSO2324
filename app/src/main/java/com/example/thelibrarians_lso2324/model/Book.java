@@ -6,14 +6,14 @@ import java.io.Serializable;
 
 public class Book implements Serializable {
 
-    public String title;
-    public String authors;
-    public String ISBN;
-    public String description;
-    public Bookgenre genre;
-    public Image cover;
-    public int totalItems;
-    public int notAvaiableItems;
+    private String title;
+    private String authors;
+    private String ISBN;
+    private String description;
+    private Bookgenre genre;
+    private Image cover;
+    private int totalItems;
+    private int notAvaiableItems;
     public String getTitle() {
         return title;
     }
