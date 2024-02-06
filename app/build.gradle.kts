@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.thelibrarians_lso2324"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.thelibrarians_lso2324"
