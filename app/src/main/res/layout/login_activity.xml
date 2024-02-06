@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -76,10 +76,14 @@
                 android:textStyle="bold"/>
 
             <EditText
+                android:id="@+id/email_login_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:drawableEnd="@drawable/done_icon"/>
+                android:drawableEnd="@drawable/done_icon"
+                android:autofillHints="emailAddress"
+                android:ems="10"
+                android:hint="email" />
 
             <View
                 android:layout_width="wrap_content"
@@ -89,12 +93,16 @@
                 android:layout_height="wrap_content"
                 android:text="Password"
                 android:alpha="0.7"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                />
 
             <EditText
+                android:id="@+id/password_login_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
+                android:ems="10"
+                android:autofillHints="password"
                 android:drawableEnd="@drawable/password_icon"/>
             <RelativeLayout
                 android:layout_width="match_parent"
