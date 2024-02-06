@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.thelibrarians_lso2324"
+    namespace = "com.project.thelibrarians_lso2324"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.thelibrarians_lso2324"
+        applicationId = "com.project.thelibrarians_lso2324"
         minSdk = 26
         targetSdk = 33
         versionCode = 1

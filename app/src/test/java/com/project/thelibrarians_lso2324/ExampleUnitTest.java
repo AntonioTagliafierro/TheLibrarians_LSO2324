@@ -1,4 +1,4 @@
-package com.example.thelibrarians_lso2324;
+package com.project.thelibrarians_lso2324;
 
 import org.junit.Test;
 

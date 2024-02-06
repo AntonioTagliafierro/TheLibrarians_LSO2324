@@ -1,6 +1,4 @@
-package com.example.thelibrarians_lso2324.model;
-
-import com.example.thelibrarians_lso2324.model.Book;
+package com.project.thelibrarians_lso2324.model;
 
 import java.util.Date;
 import java.util.List;

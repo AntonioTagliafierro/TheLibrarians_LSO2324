@@ -1,4 +1,4 @@
-package com.example.thelibrarians_lso2324.model;
+package com.project.thelibrarians_lso2324.model;
 
 import java.util.HashMap;
 import java.util.List;
