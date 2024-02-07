@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@android:style/Widget.DeviceDefault.Light.ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/vediAltriButtom"
+            android:layout_width="126dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="31dp"
+            android:background="@android:color/transparent"
+            android:gravity="right"
+            android:text="Vedi altri"
+            android:textColor="#0000FF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/PerfettiPerTeTextView"
+            app:layout_constraintTop_toBottomOf="@+id/bookImageButton" />
+
+        <ImageButton
+            android:id="@+id/bookImageButton"
+            android:layout_width="394dp"
+            android:layout_height="215dp"
+            android:layout_marginTop="60dp"
+            android:src="@android:drawable/btn_star"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bagImageButton" />
+
+        <ImageButton
+            android:id="@+id/bagImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="28dp"
+            android:src="@android:drawable/btn_star"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/PerfettiPerTeTextView"
+            android:layout_width="105dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="40dp"
+            android:text="Perfetti per te "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookImageButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
