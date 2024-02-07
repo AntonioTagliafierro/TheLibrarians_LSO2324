@@ -13,57 +13,209 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/vediAltriButtom"
-            android:layout_width="126dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="31dp"
-            android:background="@android:color/transparent"
-            android:gravity="right"
-            android:text="Vedi altri"
-            android:textColor="#0000FF"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/PerfettiPerTeTextView"
-            app:layout_constraintTop_toBottomOf="@+id/bookImageButton" />
+            <HorizontalScrollView
+                android:layout_width="411dp"
+                android:layout_height="185dp"
+                android:layout_marginTop="16dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/PerfettiPerTeTextView">
 
-        <ImageButton
-            android:id="@+id/bookImageButton"
-            android:layout_width="394dp"
-            android:layout_height="215dp"
-            android:layout_marginTop="60dp"
-            android:src="@android:drawable/btn_star"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bagImageButton" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/bagImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="28dp"
-            android:src="@android:drawable/btn_star"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp">
 
-        <TextView
-            android:id="@+id/PerfettiPerTeTextView"
-            android:layout_width="105dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="13dp"
-            android:layout_marginTop="40dp"
-            android:text="Perfetti per te "
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bookImageButton" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                        <RelativeLayout
+                            android:layout_width="158dp"
+                            android:layout_height="match_parent"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:id="@+id/bookImageView1"
+                                android:layout_width="129dp"
+                                android:layout_height="89dp"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:id="@+id/bookTitleTextView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginLeft="14dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Book Title 1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="158dp"
+                            android:layout_height="match_parent"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:id="@+id/bookImageView2"
+                                android:layout_width="129dp"
+                                android:layout_height="89dp"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:id="@+id/bookTitleTextView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginLeft="14dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_toRightOf="@id/bookImageView2"
+                                android:text="Book Title 2"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="158dp"
+                            android:layout_height="match_parent"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:id="@+id/bookImageView3"
+                                android:layout_width="129dp"
+                                android:layout_height="89dp"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:id="@+id/bookTitleTextView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginLeft="14dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Book Title 3"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="158dp"
+                            android:layout_height="match_parent"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:id="@+id/bookImageView4"
+                                android:layout_width="129dp"
+                                android:layout_height="89dp"
+                                android:scaleType="centerCrop" />
+
+                            <TextView
+                                android:id="@+id/bookTitleTextView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginLeft="14dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Book Title 4"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/vediAltriButtom"
+                android:layout_width="126dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="31dp"
+                android:background="@android:color/transparent"
+                android:gravity="right"
+                android:text="Vedi altri"
+                android:textColor="#0000FF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/PerfettiPerTeTextView"
+                app:layout_constraintTop_toBottomOf="@+id/bookImageButton" />
+
+            <ImageButton
+                android:id="@+id/bookImageButton"
+                android:layout_width="394dp"
+                android:layout_height="215dp"
+                android:layout_marginTop="60dp"
+                android:src="@android:drawable/btn_star"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bagImageButton" />
+
+            <ImageButton
+                android:id="@+id/bagImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="28dp"
+                android:src="@android:drawable/btn_star"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/PerfettiPerTeTextView"
+                android:layout_width="105dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="40dp"
+                android:text="Perfetti per te "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bookImageButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <LinearLayout
@@ -73,80 +225,80 @@
         android:background="@color/white"
         android:orientation="horizontal">
 
-    <FrameLayout
-        android:layout_width="13dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_weight="1">
-
-        <ImageButton
-            android:id="@+id/buttonHome"
-            android:layout_width="90dp"
-            android:layout_height="44dp"
-            android:layout_gravity="center_vertical"
-            android:background="@color/white"
-            android:src="@android:drawable/ic_menu_compass" />
-
-        <TextView
-            android:id="@+id/textViewHome"
-            android:layout_width="54dp"
+        <FrameLayout
+            android:layout_width="13dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|start"
-            android:text="Home"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:layout_margin="16dp"
+            android:layout_weight="1">
 
-    </FrameLayout>
+            <ImageButton
+                android:id="@+id/buttonHome"
+                android:layout_width="90dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:src="@android:drawable/ic_menu_compass" />
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_weight="1">
+            <TextView
+                android:id="@+id/textViewHome"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:text="Home"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
-        <ImageButton
-            android:id="@+id/buttonStore"
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:layout_gravity="center_vertical"
-            android:background="@color/white"
-            android:src="@android:drawable/ic_menu_search" />
+        </FrameLayout>
 
-        <TextView
-            android:id="@+id/textViewStore"
-            android:layout_width="wrap_content"
+        <FrameLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|start"
-            android:text="Store"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:layout_margin="16dp"
+            android:layout_weight="1">
 
-    </FrameLayout>
+            <ImageButton
+                android:id="@+id/buttonStore"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:src="@android:drawable/ic_menu_search" />
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_weight="1">
+            <TextView
+                android:id="@+id/textViewStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:text="Store"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
-        <ImageButton
-            android:id="@+id/buttonProfile"
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:layout_gravity="center_vertical"
-            android:background="@color/white"
-            android:src="@android:drawable/ic_menu_preferences" />
+        </FrameLayout>
 
-        <TextView
-            android:id="@+id/textViewProfile"
-            android:layout_width="wrap_content"
+        <FrameLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|start"
-            android:text="Profile"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:layout_margin="16dp"
+            android:layout_weight="1">
 
-    </FrameLayout>
+            <ImageButton
+                android:id="@+id/buttonProfile"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:src="@android:drawable/ic_menu_preferences" />
+
+            <TextView
+                android:id="@+id/textViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:text="Profile"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </FrameLayout>
 
     </LinearLayout>
 

@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         registerNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });
@@ -69,6 +69,7 @@ public class LoginActivity extends AppCompatActivity {
             }
             return false;
         });
+
 
         btnLogin.setOnClickListener(v -> {
 

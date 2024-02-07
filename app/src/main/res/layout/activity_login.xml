@@ -10,29 +10,37 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/prototype_color2"
-        android:alpha="0.7"/>
+        android:alpha="0.7">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+    </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/buttonlogin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
         android:layout_above="@id/card_view"
+        android:gravity="center"
+        android:orientation="vertical"
         android:padding="28dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/test_icon"/>
+            android:src="@drawable/test_icon" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="THE LIBRARIANS"
-            android:textStyle="bold"
             android:fontFamily="sans-serif-medium"
+            android:text="THE LIBRARIANS"
+            android:textColor="@color/prototype_color1"
             android:textSize="32sp"
-            android:textColor="@color/prototype_color1"/>
+            android:textStyle="bold" />
 
 
     </LinearLayout>
