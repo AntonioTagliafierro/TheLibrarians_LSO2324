@@ -49,8 +49,8 @@ public class LoginActivity extends AppCompatActivity {
                 TokenPayload tokenPayload = new TokenPayload(token);
                 LoginManager.getInstance().setTokenPayload(tokenPayload);
 
-               // Intent intent = new Intent(this, inserirehome.class);
-                //startActivity(intent);
+                Intent intent = new Intent(this, HomeActivity.class);
+                startActivity(intent);
             } catch (NoSuchElementException | TokenPayloadExceptions e) {
                 Utils.showAlert(this, "Error", "Invalid token");
             }
@@ -114,9 +114,9 @@ public class LoginActivity extends AppCompatActivity {
                 this
         );
 
-        //Intent intent = new Intent(this, inserirehome.class);
-        //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        //startActivity(intent);
+        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
     @Subscribe
     public void onMessageEvent(AuthenticationErrorEvent event) {
