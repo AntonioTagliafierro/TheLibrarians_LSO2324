@@ -72,4 +72,7 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation ("org.greenrobot:eventbus:3.3.1")
+    implementation ("com.auth0.android:jwtdecode:2.0.2")
+    implementation ("com.android.volley:volley:1.2.1")
 }

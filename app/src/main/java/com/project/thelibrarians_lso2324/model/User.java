@@ -2,6 +2,7 @@ package com.project.thelibrarians_lso2324.model;
 
 public class User {
 
+    private int id;
     private String email;
     private String name;
     private String surname;
@@ -35,6 +36,16 @@ public class User {
         this.surname = surname;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
+    public User(int id, String email) {
+        this.id = id;
+        this.email = email;
+    }
 }
