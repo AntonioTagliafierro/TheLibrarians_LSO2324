@@ -89,4 +89,8 @@ public class Book implements Serializable {
         this.totalCopies = totalCopies;
         this.copiesOnLendLease = copiesOnLendLease;
     }
+
+    public int getImageResourceId() {
+        return 0;
+    }
 }
