@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.SearchView;
 import android.widget.ImageView;
@@ -22,7 +23,7 @@ public class LibraryActivity extends AppCompatActivity {
     private BookAdapter bookAdapter;
     private ArrayList<Book> bookList;
     private GridLayout bookGridLayout;
-    private ArrayList<Book> bookList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

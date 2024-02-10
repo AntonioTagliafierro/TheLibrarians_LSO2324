@@ -3,35 +3,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Barra di ricerca -->
+    <!-- Barra in alto -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/prototype_color2"> <!-- Puoi personalizzare il colore di sfondo come preferisci -->
+
+
+        <!-- Pulsante di ordinamento (in alto a sinistra) -->
+        <Button
+            android:id="@+id/sortButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ordina"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_centerVertical="true"/>
+
+        <!-- Pulsante di attivazione della barra di ricerca (al centro) -->
+        <Button
+            android:id="@+id/showSearchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerca"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+        <!-- Pulsante di filtro (in alto a destra) -->
+        <Button
+            android:id="@+id/filterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filtra per genere"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <!-- Barra di ricerca (inizialmente nascosta) -->
     <EditText
         android:id="@+id/searchEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Cerca per titolo"
-        android:inputType="text" />
-
-    <!-- Pulsante di ordinamento (in alto a sinistra) -->
-    <Button
-        android:id="@+id/sortButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ordina"
-        android:layout_below="@id/searchEditText"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"/>
-
-    <!-- Pulsante di filtro (in alto a destra) -->
-    <Button
-        android:id="@+id/filterButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Filtra per genere"
-        android:layout_below="@id/searchEditText"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"/>
+        android:inputType="text"
+        android:layout_below="@id/topBar"
+        android:visibility="gone"/> <!-- Inizialmente nascosta -->
 
     <!-- Griglia di libri -->
     <GridLayout
@@ -39,7 +57,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/searchEditText"
-        android:layout_marginTop="16dp"
         android:columnCount="2"
         android:orientation="horizontal"
         android:padding="8dp">
@@ -47,5 +64,14 @@
         <!-- Placeholder per i libri -->
 
     </GridLayout>
+
+    <include
+        android:id="@+id/bottomButtonsLayout"
+        layout="@layout/bottom_buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_constraintBottom_toBottomOf="parent"
+        android:layout_alignParentBottom="true"
+        />
 
 </RelativeLayout>
