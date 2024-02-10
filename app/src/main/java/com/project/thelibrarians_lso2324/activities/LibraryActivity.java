@@ -21,31 +21,22 @@ public class LibraryActivity extends AppCompatActivity {
     private GridView gridView;
     private BookAdapter bookAdapter;
     private ArrayList<Book> bookList;
+    private GridLayout bookGridLayout;
+    private ArrayList<Book> bookList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_list);
 
-        gridView = findViewById(R.id.bookGridLayout); // Ottenere il riferimento al GridLayout
+        // Ottenere il riferimento al GridLayout
+        bookGridLayout = findViewById(R.id.bookGridLayout);
+
+        // Esempio di caricamento dinamico di miniature
         bookList = generateSampleBookList(); // Sostituisci questa chiamata con la logica per ottenere la lista dei libri
 
-        // Inizializza l'adattatore
-        bookAdapter = new BookAdapter(this, bookList);
-        gridView.setAdapter(bookAdapter);
-
-        // Esempio di caricamento dinamico di miniature nel GridLayout
-        for (int i = 0; i < bookList.size(); i++) {
-            // Creare una ImageView per ogni miniatura del libro
-            ImageView imageView = new ImageView(this);
-            // Sostituisci con la tua logica per ottenere la risorsa dell'immagine del libro
-            imageView.setImageResource(bookList.get(i).getImageResourceId());
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-
-            // Aggiungere ImageView al GridLayout
-            gridView.addView(imageView);
-        }
-    }
+        // Creazione della griglia
+        populateGridLayout();
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -101,10 +92,61 @@ public class LibraryActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+        private void populateGridLayout() {
+            // Pulire la griglia prima di ricrearla
+            bookGridLayout.removeAllViews();
 
-    // Metodo di esempio per generare una lista di libri di prova
-    private ArrayList<Book> generateSampleBookList() {
-        // Implementa la tua logica per ottenere la lista dei libri
-        // ...
+            // Creazione della griglia con due colonne
+            for (int i = 0; i < bookList.size(); i++) {
+                // Creare una View per ogni elemento della griglia
+                View bookItemView = getLayoutInflater().inflate(R.layout.book_item, null);
+
+                // Ottenere riferimenti agli elementi della vista
+                ImageView bookImageView = bookItemView.findViewById(R.id.bookImageView);
+                TextView bookTitleTextView = bookItemView.findViewById(R.id.bookTitleTextView);
+                Button addToCartButton = bookItemView.findViewById(R.id.addToCartButton);
+
+                // Ottieni il libro corrente
+                final Book currentBook = bookList.get(i);
+
+                // Imposta i dati del libro nella vista
+                bookImageView.setImageResource(currentBook.getImageResourceId());
+                bookTitleTextView.setText(currentBook.getTitle());
+
+                // Configurare il pulsante Aggiungi al carrello
+                addToCartButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        // Logica per aggiungere il libro al carrello
+                        // Esempio: mostra un messaggio di avviso
+                        showToast("Libro aggiunto al carrello: " + currentBook.getTitle());
+                    }
+                });
+
+                // Aggiungere la vista alla griglia
+                GridLayout.LayoutParams params = new GridLayout.LayoutParams();
+                params.width = GridLayout.LayoutParams.WRAP_CONTENT;
+                params.height = GridLayout.LayoutParams.WRAP_CONTENT;
+                params.columnSpec = GridLayout.spec(i % 2 == 0 ? 0 : 1); // 2 colonne, alternando
+                params.setGravity(Gravity.CENTER);
+
+                bookItemView.setLayoutParams(params);
+                bookGridLayout.addView(bookItemView);
+            }
+        }
+
+        // Metodo di esempio per generare una lista di libri di prova
+        private ArrayList<Book> generateSampleBookList() {
+            ArrayList<Book> books = new ArrayList<>();
+            // Aggiungi libri di esempio
+            // ...
+
+            return books;
+        }
+
+        // Metodo di utilità per mostrare un toast
+        private void showToast(String message) {
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        }
     }
 }
