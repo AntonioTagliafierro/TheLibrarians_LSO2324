@@ -16,14 +16,20 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_width="418dp"
+        android:layout_height="664dp"
+        android:layout_marginBottom="20dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottomButtonsLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+
+            <!-- Layout principale -->
 
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
@@ -40,138 +46,25 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="16dp">
+                    <!-- Includi la prima CardView -->
+                    <include
+                        android:id="@+id/cardview1"
+                        layout="@layout/book_frame" />
 
-                        <RelativeLayout
-                            android:layout_width="163dp"
-                            android:layout_height="match_parent"
-                            android:padding="16dp">
+                    <!-- Includi la seconda CardView -->
+                    <include
+                        android:id="@+id/cardview2"
+                        layout="@layout/book_frame" />
 
-                            <ImageView
-                                android:id="@+id/bookImageView1"
-                                android:layout_width="129dp"
-                                android:layout_height="89dp"
-                                android:scaleType="centerCrop" />
+                    <!-- Includi la terza CardView -->
+                    <include
+                        android:id="@+id/cardview3"
+                        layout="@layout/book_frame" />
 
-                            <TextView
-                                android:id="@+id/bookTitleTextView1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginStart="3dp"
-                                android:layout_marginLeft="14dp"
-                                android:layout_marginBottom="10dp"
-                                android:text="Book Title 1"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-                        </RelativeLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="16dp">
-
-                        <RelativeLayout
-                            android:layout_width="158dp"
-                            android:layout_height="match_parent"
-                            android:padding="16dp">
-
-                            <ImageView
-                                android:id="@+id/bookImageView2"
-                                android:layout_width="129dp"
-                                android:layout_height="89dp"
-                                android:scaleType="centerCrop" />
-
-                            <TextView
-                                android:id="@+id/bookTitleTextView2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginStart="3dp"
-                                android:layout_marginLeft="14dp"
-                                android:layout_marginBottom="10dp"
-                                android:layout_toRightOf="@id/bookImageView2"
-                                android:text="Book Title 2"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-                        </RelativeLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="16dp">
-
-                        <RelativeLayout
-                            android:layout_width="158dp"
-                            android:layout_height="match_parent"
-                            android:padding="16dp">
-
-                            <ImageView
-                                android:id="@+id/bookImageView3"
-                                android:layout_width="129dp"
-                                android:layout_height="89dp"
-                                android:scaleType="centerCrop" />
-
-                            <TextView
-                                android:id="@+id/bookTitleTextView3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginStart="3dp"
-                                android:layout_marginLeft="14dp"
-                                android:layout_marginBottom="10dp"
-                                android:text="Book Title 3"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-                        </RelativeLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="16dp">
-
-                        <RelativeLayout
-                            android:layout_width="158dp"
-                            android:layout_height="match_parent"
-                            android:padding="16dp">
-
-                            <ImageView
-                                android:id="@+id/bookImageView4"
-                                android:layout_width="129dp"
-                                android:layout_height="89dp"
-                                android:scaleType="centerCrop" />
-
-                            <TextView
-                                android:id="@+id/bookTitleTextView4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentStart="true"
-                                android:layout_alignParentBottom="true"
-                                android:layout_marginStart="3dp"
-                                android:layout_marginLeft="14dp"
-                                android:layout_marginBottom="10dp"
-                                android:text="Book Title 4"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-
-                        </RelativeLayout>
-
-                    </androidx.cardview.widget.CardView>
+                    <!-- Includi la quarta CardView -->
+                    <include
+                        android:id="@+id/cardview4"
+                        layout="@layout/book_frame" />
 
                 </LinearLayout>
 
@@ -183,15 +76,31 @@
                 android:layout_height="185dp"
                 android:layout_marginTop="5dp"
                 android:scrollbars="none"
-                app:layout_constraintTop_toBottomOf="@+id/vediAltriButtom2"
-                tools:layout_editor_absoluteX="9dp"
-
-                >
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vediAltriButtom2">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"></LinearLayout>
+                    android:orientation="horizontal">
+
+                    <include
+                        android:id="@+id/cardview5"
+                        layout="@layout/book_frame" />
+
+                    <include
+                        android:id="@+id/cardview6"
+                        layout="@layout/book_frame" />
+
+                    <include
+                        android:id="@+id/cardview7"
+                        layout="@layout/book_frame" />
+
+                    <include
+                        android:id="@+id/cardview8"
+                        layout="@layout/book_frame" />
+
+                </LinearLayout>
             </HorizontalScrollView>
 
 
