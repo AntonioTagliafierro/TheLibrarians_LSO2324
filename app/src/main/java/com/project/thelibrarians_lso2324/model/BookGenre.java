@@ -1,6 +1,6 @@
 package com.project.thelibrarians_lso2324.model;
 
-public enum Bookgenre {
+public enum BookGenre {
 
     FANTASCIENZA,
     FANTASY,
@@ -21,5 +21,5 @@ public enum Bookgenre {
     POESIA,
     COMMEDIA,
     SATIRA,
-    AZIONE,
+    AZIONE, SCONOSCIUTO,
 }

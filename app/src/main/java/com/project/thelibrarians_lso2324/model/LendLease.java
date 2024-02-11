@@ -7,7 +7,7 @@ public class LendLease {
 
     private List<Book> books;
     private Date startDate;
-    private Date duedate;
+    private Date dueDate;
 
     public List<Book> getBooks() {
         return books;
@@ -26,16 +26,16 @@ public class LendLease {
     }
 
     public Date getDuedate() {
-        return duedate;
+        return dueDate;
     }
 
-    public void setDuedate(Date duedate) {
-        this.duedate = duedate;
+    public void setDueDate(Date duedate) {
+        this.dueDate = duedate;
     }
 
     public LendLease(List<Book> books, Date startDate, Date duedate) {
         this.books = books;
         this.startDate = startDate;
-        this.duedate = duedate;
+        this.dueDate = dueDate;
     }
 }

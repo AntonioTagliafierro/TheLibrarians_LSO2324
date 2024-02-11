@@ -78,4 +78,7 @@ dependencies {
     implementation ("org.greenrobot:eventbus:3.3.1")
     implementation ("com.auth0.android:jwtdecode:2.0.2")
     implementation ("com.android.volley:volley:1.2.1")
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+    implementation ("com.squareup.picasso:picasso:2.71828")
+
 }
