@@ -17,6 +17,7 @@ import com.project.thelibrarians_lso2324.R;
 import com.project.thelibrarians_lso2324.controller.Controller;
 import com.project.thelibrarians_lso2324.events.BookImageEvent;
 import com.project.thelibrarians_lso2324.model.Book;
+import com.project.thelibrarians_lso2324.utils.BookGenreUtils;
 import com.project.thelibrarians_lso2324.viewmodel.BookDetailsActivityViewModel;
 
 import org.greenrobot.eventbus.EventBus;
@@ -75,7 +76,7 @@ public class BookDetailsActivity extends AppCompatActivity {
 
         titleTextView.setText(chosenBook.getTitle());
         authorTextView.setText(chosenBook.getAuthors());
-        genreTextView.setText(chosenBook.getGenre().ordinal());
+        genreTextView.setText(BookGenreUtils.getDisplayName(chosenBook.getGenre()));
         descriptionTextView.setText(chosenBook.getDescription());
         isbnTextView.setText(chosenBook.getISBN());
         copiesTextView.setText(availableCopies);

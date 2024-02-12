@@ -21,5 +21,9 @@ public enum BookGenre {
     POESIA,
     COMMEDIA,
     SATIRA,
-    AZIONE, SCONOSCIUTO,
+    AZIONE,
+    SCONOSCIUTO,
+
 }
+
+
