@@ -61,7 +61,7 @@ public class BagActivity extends AppCompatActivity {
         checkoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (K > 0) {
+                if (K > books.size()) { //per ora controlla solo se quelli del carrello superano k
                     model.sendOrder(BagActivity.this);
                     EventBus.getDefault().post(new BagUpdateEvent(0));
                     model.clearCart();
