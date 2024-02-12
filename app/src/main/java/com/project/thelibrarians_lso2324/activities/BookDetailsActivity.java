@@ -26,7 +26,7 @@ import java.util.Objects;
 
 public class BookDetailsActivity extends AppCompatActivity {
 
-    private int avaiableCopies;
+    private int availableCopies;
 
     private ImageView bookImageView;
 
@@ -71,20 +71,26 @@ public class BookDetailsActivity extends AppCompatActivity {
         bookImageView = findViewById(R.id.bookImageView);
         // Imposta l'immagine del libro tramite un metodo o un'API appropriata
 
-        avaiableCopies = chosenBook.getTotalCopies() - chosenBook.getCopiesOnLendLease();
+        availableCopies = chosenBook.getTotalCopies() - chosenBook.getCopiesOnLendLease();
 
         titleTextView.setText(chosenBook.getTitle());
         authorTextView.setText(chosenBook.getAuthors());
         genreTextView.setText(chosenBook.getGenre().ordinal());
         descriptionTextView.setText(chosenBook.getDescription());
         isbnTextView.setText(chosenBook.getISBN());
-        copiesTextView.setText(avaiableCopies);
+        copiesTextView.setText(availableCopies);
+
 
 
         addBag.setOnClickListener(v -> {
-            model.addBookInBag(chosenBook);
-            Snackbar.make(coordinatorLayout, String.format("%s aggiunto al carrello", chosenBook.getTitle()), Snackbar.LENGTH_SHORT).show();
+            if (availableCopies > 0) {
+                model.addBookInBag(chosenBook);
+                Snackbar.make(coordinatorLayout, String.format("%s aggiunto al carrello", chosenBook.getTitle()), Snackbar.LENGTH_SHORT).show();
+            } else {
+                Snackbar.make(coordinatorLayout, "Copie terminate", Snackbar.LENGTH_SHORT).show();
+            }
         });
+
 
 
 

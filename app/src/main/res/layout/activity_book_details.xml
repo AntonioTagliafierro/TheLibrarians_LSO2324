@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.BookDetailsActivity">
+
+    <RelativeLayout
+    android:id="@+id/bookDetailsRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/backButton">
 
     <!-- Tasto Torna Indietro -->
     <ImageView
@@ -35,8 +42,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="16dp" />
-
+                android:layout_marginTop="16dp"
+                android:contentDescription="Immagine del libro" />
 
             <!-- Titolo -->
             <TextView
@@ -48,7 +55,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
-            <!-- Altri TextView con i relativi vincoli -->
 
             <TextView
                 android:id="@+id/copiesTextView"
@@ -58,7 +64,6 @@
                 app:layout_constraintTop_toBottomOf="@id/titleTextView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
-
             <TextView
                 android:id="@+id/authorTextView"
                 android:layout_width="0dp"
@@ -95,11 +100,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
-    <!-- Floating Action Button -->
+</RelativeLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addToBagButton"
         android:layout_width="155dp"
@@ -109,7 +115,6 @@
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/prototype_color1"
         android:contentDescription="add book to bag"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"/>
-
-</RelativeLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
