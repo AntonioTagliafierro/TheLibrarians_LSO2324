@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="book_genres">
+        <item>FANTASCIENZA</item>
+        <item>FANTASY</item>
+        <item>ROMANZO_STORICO</item>
+        <item>THRILLER</item>
+        <item>HORROR</item>
+        <item>ROMANTICO</item>
+        <item>GIALLO</item>
+        <item>AVVENTURA</item>
+        <item>FANTASY_URBANO</item>
+        <item>FANTASY_EPICO</item>
+        <item>FAVOLA</item>
+        <item>FANTASY_SCIENTIFICO</item>
+        <item>DRAMMATICO</item>
+        <item>BIOGRAFICO</item>
+        <item>SAGGIO</item>
+        <item>SAGGIO_FILOSOFICO</item>
+        <item>POESIA</item>
+        <item>COMMEDIA</item>
+        <item>SATIRA</item>
+        <item>AZIONE</item>
+        <item>SCONOSCIUTO</item>
+    </string-array>
+</resources>

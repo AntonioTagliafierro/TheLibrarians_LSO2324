@@ -21,6 +21,18 @@ public class Book implements Serializable {
     private Image cover;
     private int totalCopies;
     private int copiesOnLendLease; //copie attualmente in prestito
+
+    private int availableCopies;
+
+    public int getAvailableCopies() {
+        availableCopies = this.getTotalCopies() - this.getCopiesOnLendLease();
+        return availableCopies;
+    }
+
+    public void setAvailableCopies(int availableCopies) {
+        this.availableCopies = availableCopies;
+    }
+
     public String getTitle() {
         return title;
     }

@@ -72,7 +72,7 @@ public class BookDetailsActivity extends AppCompatActivity {
         bookImageView = findViewById(R.id.bookImageView);
         // Imposta l'immagine del libro tramite un metodo o un'API appropriata
 
-        availableCopies = chosenBook.getTotalCopies() - chosenBook.getCopiesOnLendLease();
+        availableCopies = chosenBook.getAvailableCopies();
 
         titleTextView.setText(chosenBook.getTitle());
         authorTextView.setText(chosenBook.getAuthors());
