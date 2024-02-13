@@ -11,7 +11,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridView;
-import android.widget.SearchView;
+import androidx.appcompat.widget.SearchView;
+
 import android.widget.Spinner;
 import android.widget.Toast;
 
