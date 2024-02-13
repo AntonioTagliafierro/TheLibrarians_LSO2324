@@ -11,11 +11,23 @@
     <item
         android:id="@+id/action_sort"
         android:title="Ordina"
-        app:showAsAction="always" />
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/action_sort_alphabetical"
+                android:title="Alfabeticamente" />
+            <!-- Aggiungi altri elementi di ordinamento se necessario -->
+        </menu>
+    </item>
 
     <item
         android:id="@+id/action_filter"
         android:title="Filtra"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_show_available"
+        android:title="Mostra solo disponibili"
         app:showAsAction="never" />
 
     <!-- Altri elementi del menu se presenti -->

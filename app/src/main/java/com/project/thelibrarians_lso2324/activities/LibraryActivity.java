@@ -43,7 +43,7 @@ public class LibraryActivity extends AppCompatActivity {
     private List<Book> filteredBooks;
     private LibraryViewModel model;
     private BookGenre selectedGenre = BookGenre.SCONOSCIUTO;
-
+    private boolean showOnlyAvailableBooks = false;
     private Spinner genreSpinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +57,7 @@ public class LibraryActivity extends AppCompatActivity {
 
         books = new ArrayList<>(Objects.requireNonNull(model.getBooks().getValue()));
         filteredBooks = new ArrayList<>(books);
+
 
         bookAdapter = new BookAdapter(this, filteredBooks);
 
@@ -121,11 +122,23 @@ public class LibraryActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         int itemId = item.getItemId();
+
         if (itemId == action_sort) {
             sortBooksByAvailability();
             return true;
         } else if (itemId == action_filter) {
             applyGenreFilter();
+            return true;
+        } else if (itemId == R.id.action_show_available) {
+            // Toggle the showOnlyAvailableBooks flag
+            showOnlyAvailableBooks = !showOnlyAvailableBooks;
+            // Update the filtered books and populate the grid layout
+            populateFilteredBooks();
+            populateGridLayout();
+            return true;
+        } else if (itemId == R.id.action_sort_alphabetical) {
+            // Sort books alphabetically
+            sortBooksAlphabetically();
             return true;
         } else {
             return super.onOptionsItemSelected(item);
@@ -142,6 +155,16 @@ public class LibraryActivity extends AppCompatActivity {
         });
         populateGridLayout();
     }
+    private void sortBooksAlphabetically() {
+        Collections.sort(filteredBooks, new Comparator<Book>() {
+            @Override
+            public int compare(Book book1, Book book2) {
+                return book1.getTitle().compareToIgnoreCase(book2.getTitle());
+            }
+        });
+        populateGridLayout();
+    }
+
 
     private void applyGenreFilter() {
 
@@ -154,7 +177,7 @@ public class LibraryActivity extends AppCompatActivity {
         filteredBooks.clear();
 
         for (Book book : books) {
-            if (book.getGenre() == selectedGenre && book.getAvailableCopies() > 0) {
+            if (book.getGenre() == selectedGenre && (!showOnlyAvailableBooks || book.getAvailableCopies() > 0)) {
                 filteredBooks.add(book);
             }
         }
