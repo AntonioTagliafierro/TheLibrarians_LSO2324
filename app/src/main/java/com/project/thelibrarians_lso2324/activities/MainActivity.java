@@ -34,5 +34,6 @@ public class MainActivity extends AppCompatActivity {
             // Stampa l'errore in un Toast
             Toast.makeText(this, "Errore nella richiesta: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+
     }
 }

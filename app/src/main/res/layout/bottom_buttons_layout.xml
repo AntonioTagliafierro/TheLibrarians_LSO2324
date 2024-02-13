@@ -29,7 +29,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/ImgBtnHome"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:src="@android:drawable/btn_star" />
@@ -49,7 +49,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/imgBtnLibrary"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:src="@android:drawable/btn_star" />
@@ -57,7 +57,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Store"
+                android:text="Library"
                 android:textColor="@color/black" />
         </LinearLayout>
 
@@ -70,7 +70,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/imgBtnProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:src="@android:drawable/btn_star" />

@@ -36,7 +36,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
-public class LibraryActivity extends AppCompatActivity {
+public class LibraryActivity extends NavigationActivity {
 
     private GridView gridView;
     private BookAdapter bookAdapter;
@@ -78,6 +78,7 @@ public class LibraryActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        setupMenuButtons();
         populateGridLayout();
     }
 
@@ -183,6 +184,7 @@ public class LibraryActivity extends AppCompatActivity {
             }
         }
     }
+
     @Subscribe // potrebbe essere inutile andare a prendere solo quelli col genere in quanto già la funzione applyGenreFilter
     // dovrebbe popolare con i soli libri che hanno il genere scelto
     public void onDrinksFetched(BookFetchEvent event) {
