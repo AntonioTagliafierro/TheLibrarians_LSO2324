@@ -6,12 +6,30 @@ public class User {
     private String email;
     private String name;
     private String surname;
+    private int activeLendLease;
 
     public User(String email, String name, String surname) {
         this.email = email;
         this.name = name;
         this.surname = surname;
     }
+
+    public User(int id, String email, String name, String surname, int activeLendLease) {
+        this.id = id;
+        this.email = email;
+        this.name = name;
+        this.surname = surname;
+        this.activeLendLease = activeLendLease;
+    }
+
+    public int getActiveLendLease() {
+        return activeLendLease;
+    }
+
+    public void setActiveLendLease(int activeLendLease) {
+        this.activeLendLease = activeLendLease;
+    }
+
     public String getEmail() {
         return email;
     }
