@@ -1,5 +1,7 @@
 package com.project.thelibrarians_lso2324.activities;
 
+import static com.project.thelibrarians_lso2324.utils.Utils.showAlert;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -61,6 +63,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
     }
 
     private void showConfirmationDialog() {
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Conferma");
         builder.setMessage("Sei sicuro di voler tornare indietro? Perderai i dati inseriti.");
@@ -87,6 +90,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
     }
 
     private void showPasswordMismatchDialog() {
+        /*
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Errore");
         builder.setMessage("Le password non corrispondono. Per favore, riprova.");
@@ -100,10 +104,12 @@ public class ChangePasswordActivity extends AppCompatActivity {
         });
 
         AlertDialog dialog = builder.create();
-        dialog.show();
+        dialog.show();*/
+        showAlert(this, "Errore", "Le password non corrispondono. Per favore, riprova.");
     }
 
     private void showErrorDialog() {
+        /*
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Errore");
         builder.setMessage("Uno dei  campi è vuoto.");
@@ -117,6 +123,8 @@ public class ChangePasswordActivity extends AppCompatActivity {
         });
 
         AlertDialog dialog = builder.create();
-        dialog.show();
+        dialog.show(); */
+
+        showAlert(this , "Errore", "Uno dei  campi è vuoto.");
     }
 }
