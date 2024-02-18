@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.project.thelibrarians_lso2324.R;
 import com.project.thelibrarians_lso2324.events.BagUpdateEvent;
 import com.project.thelibrarians_lso2324.model.Book;
+import com.project.thelibrarians_lso2324.model.User;
 import com.project.thelibrarians_lso2324.viewmodel.BagViewModel;
 
 import org.greenrobot.eventbus.EventBus;
@@ -25,6 +26,7 @@ import java.util.Objects;
 
 public class BagActivity extends AppCompatActivity {
 
+    User user;
     BagViewModel model;
     RelativeLayout layout;
     private static final int K = 5; // Sostituisci con il valore desiderato di k
@@ -33,6 +35,7 @@ public class BagActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bag);
+
 
         model = new ViewModelProvider(this).get(BagViewModel.class);
         // Tasto Torna Indietro
@@ -61,7 +64,7 @@ public class BagActivity extends AppCompatActivity {
         checkoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (K > books.size()) { //per ora controlla solo se quelli del carrello superano k
+                if (K > books.size() + User.getActiveLendLease()) { //per ora controlla solo se quelli del carrello superano k
                     model.sendOrder(BagActivity.this);
                     EventBus.getDefault().post(new BagUpdateEvent(0));
                     model.clearCart();

@@ -22,7 +22,7 @@ public class User {
         this.activeLendLease = activeLendLease;
     }
 
-    public int getActiveLendLease() {
+    public static int getActiveLendLease() {
         return activeLendLease;
     }
 
