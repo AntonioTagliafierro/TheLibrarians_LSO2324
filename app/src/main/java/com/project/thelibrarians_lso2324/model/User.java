@@ -6,7 +6,7 @@ public class User {
     private String email;
     private String name;
     private String surname;
-    private int activeLendLease;
+    private static int activeLendLease;
 
     public User(String email, String name, String surname) {
         this.email = email;
