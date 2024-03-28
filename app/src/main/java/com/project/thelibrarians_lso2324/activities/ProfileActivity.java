@@ -36,6 +36,24 @@ public class ProfileActivity extends NavigationActivity {
             }
         });
 
+        TextView gestisciLibriTextView = findViewById(R.id.gestisciLibriTextField);
+        gestisciLibriTextView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, ManageBooks.class);
+                startActivity(intent);
+            }
+        });
+
+        Button esciButton = findViewById(R.id.esciButton);
+        esciButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
         setupMenuButtons();
     }
 }
