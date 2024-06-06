@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ServerTheLibrariansLSO2324" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ServerTheLibrariansLSO2324" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ServerTheLibrariansLSO2324" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../models/DAOs/bag/bag.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../models/DAOs/bag/bag.h" />
+		<Unit filename="../models/DAOs/book/bookDao.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../models/DAOs/book/bookDao.h" />
+		<Unit filename="../models/DAOs/lendlease/lendleaseDao.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../models/DAOs/lendlease/lendleaseDao.h" />
+		<Unit filename="../models/DAOs/user/userDao.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../models/DAOs/user/userDao.h" />
+		<Unit filename="../models/models.h" />
+		<Unit filename="../routing/handlers/LendLease/LeandLease.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../routing/handlers/LendLease/LendLease.h" />
+		<Unit filename="../routing/handlers/bag/baghandler.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../routing/handlers/bag/baghandler.h" />
+		<Unit filename="../routing/handlers/bookhandler/bookhandler.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../routing/handlers/bookhandler/bookhandler.h" />
+		<Unit filename="../routing/handlers/homehandler.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../routing/handlers/homehandler.h" />
+		<Unit filename="../routing/handlers/user/user.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../routing/handlers/user/user.h" />
+		<Unit filename="../routing/middleware/middleware.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../routing/middleware/middleware.h" />
+		<Unit filename="../routing/router/router.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../routing/router/router.h" />
+		<Unit filename="../server.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../server.h" />
+		<Unit filename="../utils/crypt/crypt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../utils/crypt/crypt.h" />
+		<Unit filename="../utils/date/datehandler.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../utils/date/datehandler.h" />
+		<Unit filename="../utils/file/file.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../utils/file/file.h" />
+		<Unit filename="../utils/http/http.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../utils/http/http.h" />
+		<Unit filename="../utils/json/json.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../utils/json/json.h" />
+		<Unit filename="../utils/jwt/jwt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../utils/jwt/jwt_header.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
