@@ -54,6 +54,16 @@ public class ProfileActivity extends NavigationActivity {
             }
         });
 
+        TextView iMieiMessaggi = findViewById(R.id.iMieiMessaggiTextField);
+        iMieiMessaggi.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, MessageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         setupMenuButtons();
     }
 }
