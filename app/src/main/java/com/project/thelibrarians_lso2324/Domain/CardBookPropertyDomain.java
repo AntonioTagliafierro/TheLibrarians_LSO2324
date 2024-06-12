@@ -1,0 +1,99 @@
+package com.project.thelibrarians_lso2324.Domain;
+
+import java.io.Serializable;
+
+public class CardBookPropertyDomain implements Serializable {
+    public void setTotalCopies(int totalCopies) {
+        TotalCopies = totalCopies;
+    }
+
+    public void setAvailableCopies(int availableCopies) {
+        AvailableCopies = availableCopies;
+    }
+
+    public void setCopiesInUse(int copiesInUse) {
+        CopiesInUse = copiesInUse;
+    }
+
+    private int TotalCopies,AvailableCopies,CopiesInUse;
+    private String Description;
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public int getTotalCopies() {
+        return TotalCopies;
+    }
+
+    public int getAvailableCopies() {
+        return AvailableCopies;
+    }
+
+    public void setDescription(String Description)
+    {
+        this.Description = Description;
+
+    }
+    public int getCopiesInUse() {
+        return CopiesInUse;
+    }
+
+    public String getImageUrl() {
+        return ImageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        ImageUrl = imageUrl;
+    }
+
+    public CardBookPropertyDomain(String title, String author, String ISBN, String category, String imageUrl, String description, int totalcopies, int availablecopies, int copiesinuse) {
+        this.title = title;
+        this.Author = author;
+        this.ISBN = ISBN;
+        this.Category = category;
+        this.ImageUrl = imageUrl;
+        this.TotalCopies = totalcopies;
+        this.AvailableCopies = availablecopies;
+        this.CopiesInUse = copiesinuse;
+        this.Description = description;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return Author;
+    }
+
+    public void setAuthor(String author) {
+        Author = author;
+    }
+
+    public String getISBN() {
+        return ISBN;
+    }
+
+    public void setISBN(String ISBN) {
+        this.ISBN = ISBN;
+    }
+
+    public String getCategory() {
+        return Category;
+    }
+
+    public void setCategory(String category) {
+        Category = category;
+    }
+
+    private String title;
+    private String Author;
+    private String ISBN;
+    private String Category;
+    private String ImageUrl;
+}
