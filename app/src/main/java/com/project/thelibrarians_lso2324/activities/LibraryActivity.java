@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.GridView;
 import androidx.appcompat.widget.SearchView;
 
@@ -17,14 +16,12 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.project.thelibrarians_lso2324.R;
 import com.project.thelibrarians_lso2324.events.BookFetchEvent;
 import com.project.thelibrarians_lso2324.model.Book;
 import com.project.thelibrarians_lso2324.model.BookGenre;
-import com.project.thelibrarians_lso2324.utils.BookAdapter;
+import com.project.thelibrarians_lso2324.adapters.BookAdapter;
 import com.project.thelibrarians_lso2324.viewmodel.LibraryViewModel;
 
 import org.greenrobot.eventbus.EventBus;

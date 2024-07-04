@@ -1,4 +1,4 @@
-package com.project.thelibrarians_lso2324.utils;
+package com.project.thelibrarians_lso2324.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
