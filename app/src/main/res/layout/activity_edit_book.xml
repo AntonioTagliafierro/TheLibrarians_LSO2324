@@ -166,40 +166,12 @@
                 android:ems="10"
                 android:hint="Add category"
                 android:inputType="text"
-                app:layout_constraintBottom_toTopOf="@+id/textViewDescrizioneLibro"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.015"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/CopieTotali_EditText"
                 app:layout_constraintVertical_bias="1.0" />
 
-            <TextView
-                android:id="@+id/textViewDescrizioneLibro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="15dp"
-                android:alpha="0.7"
-                android:textStyle="bold"
-                android:text="Book's description"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintBottom_toTopOf="@+id/DescrizioneLibro_EditText"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/GenereLibro_EditText" />
-
-            <EditText
-                android:id="@+id/DescrizioneLibro_EditText"
-                android:layout_width="400dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="30dp"
-                android:ems="10"
-                android:hint="Add description"
-                android:inputType="text"
-                android:singleLine="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/GenereLibro_EditText" />
 
             <Button
                 android:id="@+id/ConfirmEdits"
@@ -215,7 +187,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/DescrizioneLibro_EditText"
+                app:layout_constraintTop_toBottomOf="@+id/GenereLibro_EditText"
                 app:layout_constraintVertical_bias="0.045" />
 
             <TextView
