@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="833dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="63dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/ButtonAggiungiCopertina"
+                android:layout_width="53dp"
+                android:layout_height="49dp"
+                android:layout_marginEnd="70dp"
+                android:backgroundTint="#FDF6FE"
+                android:src="@drawable/baseline_add_circle_24"
+                app:layout_constraintBottom_toTopOf="@+id/Text_PlainText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewCopertinaFoto"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textViewCaricaCopertina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alpha="0.7"
+                android:textStyle="bold"
+                android:text="Upload book cover"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageViewCopertinaFoto"
+                android:layout_width="164dp"
+                android:layout_height="191dp"
+                android:layout_marginTop="7dp"
+                android:adjustViewBounds="false"
+                android:background="#FDF6FE"
+                android:duplicateParentState="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCaricaCopertina"
+                app:srcCompat="@drawable/baseline_menu_book_24" />
+
+            <TextView
+                android:id="@+id/textViewAutore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:alpha="0.7"
+                android:text="Author"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/AutoreLibro_EditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Text_PlainText" />
+
+            <EditText
+                android:id="@+id/AutoreLibro_EditText"
+                android:layout_width="400dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Add author"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Text_PlainText" />
+
+            <TextView
+                android:id="@+id/textViewISBN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:alpha="0.7"
+                android:textStyle="bold"
+                android:text="Book's ISBN"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintBottom_toTopOf="@+id/ISBN_EditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AutoreLibro_EditText" />
+
+            <EditText
+                android:id="@+id/ISBN_EditText"
+                android:layout_width="400dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Add ISBN"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AutoreLibro_EditText" />
+
+            <TextView
+                android:id="@+id/textViewCopieTotali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:alpha="0.7"
+                android:textStyle="bold"
+                android:text="Total copies"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintBottom_toTopOf="@+id/CopieTotali_EditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ISBN_EditText" />
+
+            <EditText
+                android:id="@+id/CopieTotali_EditText"
+                android:layout_width="400dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Add total copies"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ISBN_EditText" />
+
+            <TextView
+                android:id="@+id/textViewGenereLibro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:alpha="0.7"
+                android:text="Book's category"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/GenereLibro_EditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CopieTotali_EditText" />
+
+            <EditText
+                android:id="@+id/GenereLibro_EditText"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Add category"
+                android:inputType="text"
+                app:layout_constraintBottom_toTopOf="@+id/textViewDescrizioneLibro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.015"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CopieTotali_EditText"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textViewDescrizioneLibro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="15dp"
+                android:alpha="0.7"
+                android:textStyle="bold"
+                android:text="Book's description"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintBottom_toTopOf="@+id/DescrizioneLibro_EditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/GenereLibro_EditText" />
+
+            <EditText
+                android:id="@+id/DescrizioneLibro_EditText"
+                android:layout_width="400dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Add description"
+                android:inputType="text"
+                android:singleLine="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/GenereLibro_EditText" />
+
+            <Button
+                android:id="@+id/ConfirmEdits"
+                android:layout_width="208dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="30dp"
+                android:text="Confirm edits"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                app:icon="@drawable/baseline_done_24"
+                app:iconSize="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/DescrizioneLibro_EditText"
+                app:layout_constraintVertical_bias="0.045" />
+
+            <TextView
+                android:id="@+id/TilteTagEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="15dp"
+                android:alpha="0.7"
+                android:text="Title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/Text_PlainText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewCopertinaFoto"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/Text_PlainText"
+                android:layout_width="400dp"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Add title"
+                android:inputType="text|textLongMessage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewCopertinaFoto" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="412dp"
+        android:layout_height="67dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-1dp"
+
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/shape_react"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Edit book"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/imageButtonBackCardBook"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="111dp"
+            android:layout_marginBottom="19dp"
+            android:layout_toStartOf="@+id/textView"
+            android:backgroundTint="#2195F2"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
