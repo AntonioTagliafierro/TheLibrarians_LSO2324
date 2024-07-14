@@ -17,7 +17,7 @@ import com.project.thelibrarians_lso2324.R;
 
 public class InformationBook extends AppCompatActivity {
 
-    private TextView textViewTitle, textViewAuthor,textViewCategory,textViewDescription,textViewTotalCopies,
+    private TextView textViewTitle, textViewAuthor,textViewCategory,textViewTotalCopies,
     textViewAvailableCopies,textViewCopiesInUse,textViewISBN;
     private ImageView ImageViewCopertinaLibro;
     private CardBookPropertyDomain object;
@@ -66,7 +66,6 @@ public class InformationBook extends AppCompatActivity {
             textViewTotalCopies.setText(String.valueOf(object.getTotalCopies()));
             textViewAvailableCopies.setText(String.valueOf(object.getAvailableCopies()));
             textViewCopiesInUse.setText(String.valueOf(object.getCopiesInUse()));
-            textViewDescription.setText(object.getDescription());
         }
 
     private void initView() {
@@ -74,7 +73,6 @@ public class InformationBook extends AppCompatActivity {
         textViewAuthor = findViewById(R.id.textViewAuthor);
         textViewCategory = findViewById(R.id.textViewCategoryInformation);
         textViewISBN = findViewById(R.id.textViewISBN);
-        textViewDescription = findViewById(R.id.textViewDescription);
         textViewTotalCopies = findViewById(R.id.textViewTotalCopies);
         textViewAvailableCopies = findViewById(R.id.textViewAvailableCopies);
         textViewCopiesInUse = findViewById(R.id.textViewCopiesInUse);

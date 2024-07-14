@@ -16,7 +16,6 @@ public class Book implements Serializable {
     private String title;
     private String authors;
     private String ISBN;
-    private String description;
     private BookGenre genre;
     private Image cover;
     private int totalCopies;
@@ -55,14 +54,6 @@ public class Book implements Serializable {
 
     public void setISBN(String ISBN) {
         this.ISBN = ISBN;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public BookGenre getGenre() {
@@ -155,7 +146,6 @@ public class Book implements Serializable {
                     object.getString("title"),
                     object.getString("authors"),
                     object.getString("isbn"),
-                    object.getString("description"),
                     getBookGenreFromString(genreString),
                     /*gestire l'oggetto Image qui. */
                     null,
@@ -181,11 +171,10 @@ public class Book implements Serializable {
     }
 
 
-    public Book(String title, String authors, String ISBN, String description, BookGenre genre, Image cover, int totalCopies, int copiesOnLendLease) {
+    public Book(String title, String authors, String ISBN, BookGenre genre, Image cover, int totalCopies, int copiesOnLendLease) {
         this.title = title;
         this.authors = authors;
         this.ISBN = ISBN;
-        this.description = description;
         this.genre = genre;
         this.cover = cover;
         this.totalCopies = totalCopies;

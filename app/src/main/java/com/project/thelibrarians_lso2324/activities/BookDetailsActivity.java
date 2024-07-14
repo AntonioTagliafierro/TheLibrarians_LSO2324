@@ -54,7 +54,6 @@ public class BookDetailsActivity extends AppCompatActivity {
         TextView titleTextView = findViewById(R.id.titleTextView);
         TextView authorTextView = findViewById(R.id.authorTextView);
         TextView genreTextView = findViewById(R.id.genreTextView);
-        TextView descriptionTextView = findViewById(R.id.descriptionTextView);
         TextView isbnTextView = findViewById(R.id.isbnTextView);
         TextView copiesTextView = findViewById(R.id.copiesTextView);
         CoordinatorLayout coordinatorLayout = findViewById(R.id.coordinator_detail);
@@ -77,7 +76,6 @@ public class BookDetailsActivity extends AppCompatActivity {
         titleTextView.setText(chosenBook.getTitle());
         authorTextView.setText(chosenBook.getAuthors());
         genreTextView.setText(BookGenreUtils.getDisplayName(chosenBook.getGenre()));
-        descriptionTextView.setText(chosenBook.getDescription());
         isbnTextView.setText(chosenBook.getISBN());
         copiesTextView.setText(availableCopies);
 

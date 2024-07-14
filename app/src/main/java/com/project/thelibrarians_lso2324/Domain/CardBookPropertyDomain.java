@@ -47,7 +47,7 @@ public class CardBookPropertyDomain implements Serializable {
         ImageUrl = imageUrl;
     }
 
-    public CardBookPropertyDomain(String title, String author, String ISBN, String category, String imageUrl, String description, int totalcopies, int availablecopies, int copiesinuse) {
+    public CardBookPropertyDomain(String title, String author, String ISBN, String category, String imageUrl, int totalcopies, int availablecopies, int copiesinuse) {
         this.title = title;
         this.Author = author;
         this.ISBN = ISBN;
@@ -56,7 +56,6 @@ public class CardBookPropertyDomain implements Serializable {
         this.TotalCopies = totalcopies;
         this.AvailableCopies = availablecopies;
         this.CopiesInUse = copiesinuse;
-        this.Description = description;
     }
 
     public String getTitle() {

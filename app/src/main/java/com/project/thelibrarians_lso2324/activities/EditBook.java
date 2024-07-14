@@ -35,7 +35,7 @@ public class EditBook extends AppCompatActivity {
     //UI elements
     private ImageView CopertinaFoto;
     private ImageButton AggiungiFoto;
-    EditText Author,Title,ISBN,Category,Description,TotalCopies;
+    EditText Author,Title,ISBN,Category,TotalCopies;
     private Button ConfirmEdits;
 
     //Object for passing data
@@ -96,7 +96,6 @@ public class EditBook extends AppCompatActivity {
                 object.setAuthor(Author.getText().toString());
                 object.setCategory(Category.getText().toString());
                 object.setISBN(ISBN.getText().toString());
-                object.setDescription(Description.getText().toString());
                 object.setTotalCopies(Integer.parseInt(TotalCopies.getText().toString()));
                 Intent intent = new Intent(EditBook.this, InformationBook.class);
                 intent.putExtra("object", object);
@@ -117,14 +116,12 @@ public class EditBook extends AppCompatActivity {
         Category.setText(object.getCategory());
         TotalCopies.setText(String.valueOf(object.getTotalCopies()));
         ISBN.setText(object.getISBN());
-        Description.setText(object.getDescription());
     }
     private void initView() {
         Title =  (EditText) findViewById(R.id.Text_PlainText);
         Author = (EditText) findViewById(R.id.AutoreLibro_EditText);
         ISBN = (EditText) findViewById(R.id.ISBN_EditText);
         Category = (EditText) findViewById(R.id.GenereLibro_EditText);
-        Description = (EditText) findViewById(R.id.DescrizioneLibro_EditText);
         TotalCopies = (EditText) findViewById(R.id.CopieTotali_EditText);
     }
 

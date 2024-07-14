@@ -34,7 +34,7 @@ public class AddBookActivity extends AppCompatActivity {
     //UI elements
     private ImageView CopertinaFoto;
     private ImageButton AggiungiFoto;
-    EditText Author,Title,ISBN,Category,Description,TotalCopies;
+    EditText Author,Title,ISBN,Category,TotalCopies;
     private Button ConfirmAddition;
     private CardBookPropertyDomain object;
 
@@ -79,10 +79,10 @@ public class AddBookActivity extends AppCompatActivity {
         ConfirmAddition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Title.getText().toString().isEmpty() || Author.getText().toString().isEmpty() || ISBN.getText().toString().isEmpty() || Category.getText().toString().isEmpty() || Description.getText().toString().isEmpty() || TotalCopies.getText().toString().isEmpty() || selectedImageUri == null) {
+                if (Title.getText().toString().isEmpty() || Author.getText().toString().isEmpty() || ISBN.getText().toString().isEmpty() || Category.getText().toString().isEmpty() ||  TotalCopies.getText().toString().isEmpty() || selectedImageUri == null) {
                     Toast.makeText(AddBookActivity.this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
                 } else {
-                    object = new CardBookPropertyDomain(Title.getText().toString(), Author.getText().toString(), ISBN.getText().toString(), Category.getText().toString(), selectedImageUri.toString(), Description.getText().toString(), Integer.parseInt(TotalCopies.getText().toString()), Integer.parseInt(TotalCopies.getText().toString()), 0);
+                    object = new CardBookPropertyDomain(Title.getText().toString(), Author.getText().toString(), ISBN.getText().toString(), Category.getText().toString(), selectedImageUri.toString(),  Integer.parseInt(TotalCopies.getText().toString()), Integer.parseInt(TotalCopies.getText().toString()), 0);
                     Intent intent = new Intent(AddBookActivity.this, HomePageActivity.class);
                     intent.putExtra("object", object);
                     startActivity(intent);
@@ -98,7 +98,6 @@ public class AddBookActivity extends AppCompatActivity {
         Author = (EditText) findViewById(R.id.AutoreLibro_EditText);
         ISBN = (EditText) findViewById(R.id.ISBN_EditText);
         Category = (EditText) findViewById(R.id.GenereLibro_EditText);
-        Description = (EditText) findViewById(R.id.DescrizioneLibro_EditText);
         TotalCopies = (EditText) findViewById(R.id.CopieTotali_EditText);
     }
 
