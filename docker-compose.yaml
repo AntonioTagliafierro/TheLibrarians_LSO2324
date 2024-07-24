@@ -21,4 +21,4 @@ services:
       - TZ=Europe/Rome
       - PGTZ=Europe/Rome
     volumes:
-      - ./library_db.sql:/docker-entrypoint-initdb.d/docker_postgres_library_db.sql
+      - /home/antonio/Scrivania/sql-scripts:/docker-entrypoint-initdb.d
