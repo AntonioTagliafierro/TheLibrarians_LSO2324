@@ -20,8 +20,17 @@ public class Book implements Serializable {
     private Image cover;
     private int totalCopies;
     private int copiesOnLendLease; //copie attualmente in prestito
-
     private int availableCopies;
+
+    public Book(String title, String authors) {
+        this.title = title;
+        this.authors = authors;
+    }
+
+    public Book(String title) {
+        this.title = title;
+    }
+
 
     public int getAvailableCopies() {
         availableCopies = this.getTotalCopies() - this.getCopiesOnLendLease();

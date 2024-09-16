@@ -5,9 +5,14 @@ import java.util.List;
 
 public class LendLease {
 
+    private User user;
     private List<Book> books;
     private Date startDate;
     private Date dueDate;
+    private String status;
+
+
+
 
     public List<Book> getBooks() {
         return books;
@@ -25,7 +30,7 @@ public class LendLease {
         this.startDate = startDate;
     }
 
-    public Date getDuedate() {
+    public Date getDueDate() {
         return dueDate;
     }
 
@@ -33,9 +38,29 @@ public class LendLease {
         this.dueDate = duedate;
     }
 
-    public LendLease(List<Book> books, Date startDate, Date duedate) {
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+//    public LendLease(List<Book> books, Date startDate, Date duedate) {
+//        this.books = books;
+//        this.startDate = startDate;
+//        this.dueDate = dueDate;
+//    }
+
+    public LendLease(User user, List<Book> books, Date startDate, Date dueDate, String status) {
+        this.user = user;
         this.books = books;
         this.startDate = startDate;
         this.dueDate = dueDate;
+        this.status = status;
+    }
+
+    public LendLease() {
+
     }
 }
